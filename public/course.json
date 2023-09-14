@@ -1,0 +1,76 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "course_name": "Introduction to Programming",
+      "price": 299,
+      "credit_hours": 3,
+      "details": "A beginner-level course that teaches the fundamentals of programming using popular languages like Python and Java.",
+      "image": "https://i.ibb.co/GkvZCJn/1.jpg"
+    },
+    {
+      "id": 2,
+      "course_name": "Web Development Bootcamp",
+      "price": 599,
+      "credit_hours": 4,
+      "details": "An intensive bootcamp covering HTML, CSS, JavaScript, and popular web development frameworks like React and Angular.",
+      "image": "https://i.ibb.co/TLGDrf4/2.jpg"
+    },
+    {
+      "id": 3,
+      "course_name": "Data Science and Machine Learning",
+      "price": 799,
+      "credit_hours": 4,
+      "details": "Explore the world of data science and machine learning, including data analysis, visualization, and predictive modeling.",
+      "image": "https://i.ibb.co/Q6C5NBq/3.jpg"
+    },
+    {
+      "id": 4,
+      "course_name": "Cybersecurity Fundamentals",
+      "price": 399,
+      "credit_hours": 3,
+      "details": "Learn the basics of cybersecurity, including network security, encryption, and threat detection.",
+      "image": "https://i.ibb.co/JkdCzSk/4.png"
+    },
+    {
+      "id": 5,
+      "course_name": "Database Management",
+      "price": 349,
+      "credit_hours": 3,
+      "details": "Master the art of database design, SQL, and database administration for various relational database systems.",
+      "image": "https://i.ibb.co/d2pMRH9/5.png"
+    },
+    {
+      "id": 6,
+      "course_name": "Mobile App Development",
+      "price": 499,
+      "credit_hours": 4,
+      "details": "Create mobile applications for iOS and Android platforms using languages like Swift and Kotlin.",
+      "image": "https://i.ibb.co/hd9m8VT/6.jpg"
+    },
+    {
+      "id": 7,
+      "course_name": "Cloud Computing and AWS",
+      "price": 699,
+      "credit_hours": 4,
+      "details": "Get hands-on experience with cloud computing and Amazon Web Services (AWS) for scalable and cost-effective solutions.",
+      "image": "https://i.ibb.co/N9tnHYR/7.png"
+    },
+    {
+      "id": 8,
+      "course_name": "Artificial Intelligence and Deep Learning",
+      "price": 899,
+      "credit_hours": 4,
+      "details": "Dive into AI and deep learning concepts, neural networks, and practical AI application development.",
+      "image": "https://i.ibb.co/VM49SZB/8.jpg"
+    },
+    {
+      "id": 9,
+      "course_name": "Software Engineering Best Practices",
+      "price": 449,
+      "credit_hours": 3,
+      "details": "Learn software engineering principles, agile methodologies, and coding best practices for building robust software.",
+      "image": "https://i.ibb.co/wds8N5W/9.png"
+    }
+  ]
+}
