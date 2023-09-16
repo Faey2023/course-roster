@@ -19,25 +19,27 @@ const Courses = () => {
 
   const handlePurchase = (course) => {
     const isInCart = showCourse.find((item) => item.id == course.id);
-    let cost = course.price;
+    // let cost = course.price;
+    // let cost = 0;
     let hour = course.credit;
+    // let hour = 0;
     // console.log(course.price);
     if (isInCart) {
       toast("Course already exists in cart.");
     } else {
       setShowCourse([...showCourse, course]);
-      const NewCost = cost + course.price;
+      const NewCost = totalCost + course.price;
       // console.log(NewCost);
-      hour += course.credit;
+      let total = totalHour + course.credit;
       console.log(hour);
-      const newHour = remainingHour - hour;
-      console.log(newHour);
-      if (newHour > 20) {
+      const newHour = remainingHour - course.credit;
+      console.log(remainingHour);
+      if (total > 20) {
         toast("Credit hour exceeded");
       } else {
         setRemainingHour(newHour);
         setTotalCost(NewCost);
-        setTotalHour(totalHour);
+        setTotalHour(total);
       }
     }
   };
