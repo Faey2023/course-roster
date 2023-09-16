@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { ToastContainer } from "react-toastify";
 const Course = ({ course, handlePurchase }) => {
   const { image, course_name, price, credit, details } = course;
   return (
@@ -42,6 +43,7 @@ const Course = ({ course, handlePurchase }) => {
           >
             Purchase
           </button>
+          <ToastContainer/>
         </div>
       </div>
     </>
