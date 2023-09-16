@@ -1,4 +1,5 @@
-const Course = ({ course }) => {
+import PropTypes from "prop-types";
+const Course = ({ course, handlePurchase }) => {
   const { image, course_name, price, credit, details } = course;
   return (
     <>
@@ -46,5 +47,7 @@ const Course = ({ course }) => {
     </>
   );
 };
-
+Course.propTypes = {
+  course: PropTypes.object,
+};
 export default Course;
