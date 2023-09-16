@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Course from "./Course";
 //toaster
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Courses = () => {
@@ -25,21 +25,25 @@ const Courses = () => {
     if (isInCart) {
       toast("Course already exists in cart.");
     } else {
-      showCourse.forEach((item) => {
-        cost += item.price;
-        setTotalCost(cost);
-        hour += item.credit;
-        // console.log(hour);
-        setRemainingHour(remainingHour - hour);
-        setTotalHour(hour);
-      });
       setShowCourse([...showCourse, course]);
+      const NewCost = cost + course.price;
+      // console.log(NewCost);
+      hour += course.credit;
+      console.log(hour);
+      const newHour = remainingHour - hour;
+      console.log(newHour);
+      if (newHour > 20) {
+        toast("Credit hour exceeded");
+      } else {
+        setRemainingHour(newHour);
+        setTotalCost(NewCost);
+        setTotalHour(totalHour);
+      }
     }
-    // console.log(newArray);
   };
   return (
-    <div className="flex gap-6">
-      <div className="w-3/4 gap-6 grid grid-cols-1 xl:grid-cols-3">
+    <div className="flex flex-col md:flex-row gap-6">
+      <div className="container mx-auto w-3/4 gap-6 grid grid-cols-1 xl:grid-cols-3">
         {courses.map((course) => (
           <Course
             key={courses.id}
@@ -48,9 +52,10 @@ const Courses = () => {
           ></Course>
         ))}
       </div>
-      <div className=" card bg-[#FFF] shadow-xl p-5 ">
+      {/* cart div */}
+      <div className=" card bg-[#FFF] shadow-xl p-5 my-5">
         <h3 className="text-[#2F80ED] text-lg font-bold">
-          Credit Hour Remaining {remainingHour}
+          Credit Hour Remaining {remainingHour} hours
         </h3>
         <hr />
         <h3 className="text-xl font-bold my-5">Course Name</h3>

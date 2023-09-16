@@ -16,9 +16,9 @@ const Course = ({ course, handlePurchase }) => {
           <h2 className="text-black font-semibold text-xl">{course_name}</h2>
           <p className="text-[#1c1b1b99] text-sm font-normal">{details}</p>
           <div className="flex">
-            <div className="flex mr-1 gap-3">
+            <div className="flex mr-3 gap-1">
               <img
-                className=" w-[24px] h-[24px] "
+                className="w-[24px] h-[24px] "
                 src="https://i.ibb.co/Y8vks91/dollar-sign-1.jpg"
                 alt=""
               />
@@ -39,11 +39,11 @@ const Course = ({ course, handlePurchase }) => {
           </div>
           <button
             onClick={() => handlePurchase(course)}
-            className="btn w-[280px] h-[40px] bg-[#2F80ED] text-white hover:bg-blue-900"
+            className="btn md:w-[250px] h-[40px] bg-[#2F80ED] text-white hover:bg-blue-900"
           >
             Purchase
           </button>
-          <ToastContainer/>
+          <ToastContainer />
         </div>
       </div>
     </>
