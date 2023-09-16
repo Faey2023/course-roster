@@ -27,7 +27,6 @@ const Courses = () => {
     if (isInCart) {
       toast("Course already exists in cart.");
     } else {
-      setShowCourse([...showCourse, course]);
       const NewCost = totalCost + course.price;
       // console.log(NewCost);
       let total = totalHour + course.credit;
@@ -37,6 +36,7 @@ const Courses = () => {
       if (total > 20) {
         toast("Credit hour exceeded");
       } else {
+        setShowCourse([...showCourse, course]);
         setRemainingHour(newHour);
         setTotalCost(NewCost);
         setTotalHour(total);
